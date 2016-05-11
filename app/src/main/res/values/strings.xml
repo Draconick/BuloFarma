@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bulofarma</string>
+    <string name="listar_alarme">Listar Alarme</string>
+    <string name="ver_bula">Ver Bula</string>
 </resources>

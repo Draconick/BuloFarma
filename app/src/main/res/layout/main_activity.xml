@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/SteelBlue">
+
+    <TextView
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        android:text="Menu Principal"
+        android:textColor="@color/White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:background="@color/Gainsboro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/listar_alarme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/listar_alarme"
+            android:textColor="@color/Black"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:clickable="true"
+            android:onClick="ListarAlarme"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="200dp"
+            android:drawableTop="@drawable/img_alarm" />
+        <TextView
+            android:id="@+id/ver_bula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/Black"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/listar_alarme"
+            android:layout_marginRight="70dp"
+            android:text="@string/ver_bula"
+            android:clickable="true"
+            android:onClick="verBula"
+            android:drawableTop="@drawable/img_alarm"/>
+    </RelativeLayout>
 
 </LinearLayout>
