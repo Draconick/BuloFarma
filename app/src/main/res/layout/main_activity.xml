@@ -29,9 +29,12 @@
             android:textAppearance="?android:textAppearanceSmall"
             android:clickable="true"
             android:onClick="ListarAlarme"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="200dp"
-            android:drawableTop="@drawable/img_alarm" />
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:textAlignment="center"
+            android:textSize="20pt"
+            android:drawableTop="@drawable/alarm_img" />
         <TextView
             android:id="@+id/ver_bula"
             android:layout_width="wrap_content"
@@ -40,12 +43,14 @@
             android:textColor="@color/Black"
             android:textStyle="bold"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@id/listar_alarme"
-            android:layout_marginRight="70dp"
+            android:layout_marginRight="90dp"
+            android:layout_marginTop="30dp"
             android:text="@string/ver_bula"
             android:clickable="true"
             android:onClick="verBula"
-            android:drawableTop="@drawable/img_alarm"/>
+            android:textSize="@android:dimen/app_icon_size"
+            android:textAlignment="center"
+            android:drawableTop="@drawable/leaflet_list"/>
     </RelativeLayout>
 
 </LinearLayout>

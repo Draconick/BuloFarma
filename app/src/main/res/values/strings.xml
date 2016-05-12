@@ -2,4 +2,5 @@
     <string name="app_name">Bulofarma</string>
     <string name="listar_alarme">Listar Alarme</string>
     <string name="ver_bula">Ver Bula</string>
+    <string name="bulas_favoritas">Ver Bulas Favoritas</string>
 </resources>
