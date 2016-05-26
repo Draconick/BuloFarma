@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkSlateBlue">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30pt"
+        android:textColor="@color/White"
+        android:fontFamily="casual"
+        android:drawableTop="@drawable/logo_bulofarma"
+        android:drawableBottom="@drawable/menu_launcher"
+        android:layout_gravity="center|top"/>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:background="@drawable/edit_text_style"
+        android:text="Iniciar"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:textSize="20pt"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="bottom|center"
+        android:onClick="menuPrincipal"/>
+
+
+</LinearLayout>

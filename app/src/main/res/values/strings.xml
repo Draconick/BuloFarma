@@ -1,6 +1,16 @@
 <resources>
-    <string name="app_name">Bulofarma</string>
+    <string name="app_name">BuloFarma</string>
     <string name="listar_alarme">Listar Alarme</string>
     <string name="ver_bula">Ver Bula</string>
     <string name="bulas_favoritas">Ver Bulas Favoritas</string>
+    <string name="dashboard">Menu Principal</string>
+    <string name="menu_principal">Bem vindo ao Menu Principal!</string>
+    <string name="aviso_menu_admin">Clique novamente para entrar no modo Administrador!</string>
+    <string name="usuario">Usuário: </string>
+    <string name="senha">Senha: </string>
+    <string name="modo_admin">Entrar no modo Administrador</string>
+    <string name="login">Login</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="admin_login_sucesso">Login (Administrador) efetuado com Sucesso!</string>
+    <string name="login_erro">Usuário/senha Invalido(s)!</string>
 </resources>

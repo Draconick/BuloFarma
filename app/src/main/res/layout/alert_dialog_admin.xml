@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/usuario"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/Black"/>
+    <EditText
+        android:id="@+id/login_admin"
+        android:paddingLeft="5dp"
+        android:hint="Informe seu usuário"
+        android:background="@drawable/edit_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/Black"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"/>
+    <EditText
+        android:id="@+id/senha_admin"
+        android:paddingLeft="5dp"
+        android:hint="Digite sua senha"
+        android:background="@drawable/edit_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textPassword"/>
+
+</LinearLayout>

@@ -3,20 +3,37 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/bulofarma_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-    <activity android:name=".MainActivity">
+    <activity android:name=".FirstActivity"
+        android:screenOrientation="portrait">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
+
             <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
+    <activity android:name=".MainActivity"
+        android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="intent.menu.principal"/>
+
+            <category android:name="android.intent.category.DEFAULT"/>
         </intent-filter>
 </activity>
 
         <activity android:name=".VerBulaActivity">
             <intent-filter>
                 <action android:name="intent.verbula"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".DashboardAdmin">
+            <intent-filter>
+                <action android:name="intent.dashboard.admin"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
