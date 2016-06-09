@@ -119,9 +119,11 @@ public class MainActivity extends Activity {
 
     }
     public void bulaFavorita(View view){
-
+        Intent it = new Intent(this,BulaFavoritaActivity.class);
+        startActivity(it);
     }
     public void listarAlarmes(View view){
-
+        Intent it = new Intent(this,AlarmeActivity.class);
+        startActivity(it);
     }
 }

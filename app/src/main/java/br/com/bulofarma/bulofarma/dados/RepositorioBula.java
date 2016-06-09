@@ -52,7 +52,31 @@ public class RepositorioBula {
         db.close();
         return bulaList;
     }
+    public List<Bula> listarTeste(String pesquisa){
+        SQLiteDatabase db = bulaOpenHelper.getWritableDatabase();
+        Cursor cursor = db.query(bulaOpenHelper.TABELA_BULA,
+                new String[]{"titulo", "composicao","indicacoes","contraindicacoes","modousar",
+                        "posologia","advertencias","efeitocolateral","favorito"},"titulo like '%" + pesquisa + "%'",null,null,null,
+                null);
+        List<Bula> bulaList = new ArrayList<>();
+        while (cursor.moveToNext()){
+            String titulo = cursor.getString(cursor.getColumnIndex("titulo"));
+            String composicao = cursor.getString(cursor.getColumnIndex("composicao"));
+            String indicacoes = cursor.getString(cursor.getColumnIndex("indicacoes"));
+            String contraindicacoes = cursor.getString(cursor.getColumnIndex("contraindicacoes"));
+            String modoUsar = cursor.getString(cursor.getColumnIndex("modousar"));
+            String posologia = cursor.getString(cursor.getColumnIndex("posologia"));
+            String advertencias = cursor.getString(cursor.getColumnIndex("advertencias"));
+            String efeitocolateral = cursor.getString(cursor.getColumnIndex("efeitocolateral"));
+            String strfavorito = cursor.getString(cursor.getColumnIndex("favorito"));
+            int favorito = Integer.parseInt(strfavorito);
 
+            Bula bula = new Bula(titulo,composicao,indicacoes,contraindicacoes,modoUsar,posologia,advertencias,efeitocolateral,favorito);
+            bulaList.add(bula);
+        }
+        db.close();
+        return bulaList;
+    }
     public void favoritar(Bula bula){
         SQLiteDatabase db = this.bulaOpenHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -88,6 +112,34 @@ public class RepositorioBula {
             bulaList.add(bula);
         }
         db.close();
+        return bulaList;
+    }
+
+    public List<Bula> buscarBula(String bulaEscolhida){
+        SQLiteDatabase db = bulaOpenHelper.getWritableDatabase();
+        Cursor cursor = db.query(bulaOpenHelper.TABELA_BULA,
+                new String[]{"titulo", "composicao","indicacoes","contraindicacoes","modousar",
+                        "posologia","advertencias","efeitocolateral","favorito"},
+                "titulo ='"+bulaEscolhida+"'",null,null,null,null);
+        List<Bula> bulaList = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            String titulo = cursor.getString(cursor.getColumnIndex("titulo"));
+            String composicao = cursor.getString(cursor.getColumnIndex("composicao"));
+            String indicacoes = cursor.getString(cursor.getColumnIndex("indicacoes"));
+            String contraindicacoes = cursor.getString(cursor.getColumnIndex("contraindicacoes"));
+            String modoUsar = cursor.getString(cursor.getColumnIndex("modousar"));
+            String posologia = cursor.getString(cursor.getColumnIndex("posologia"));
+            String advertencias = cursor.getString(cursor.getColumnIndex("advertencias"));
+            String efeitocolateral = cursor.getString(cursor.getColumnIndex("efeitocolateral"));
+            String strfavorito = cursor.getString(cursor.getColumnIndex("favorito"));
+            int favorito = Integer.parseInt(strfavorito);
+
+            Bula bula = new Bula(titulo, composicao, indicacoes, contraindicacoes,
+                    modoUsar, posologia, advertencias, efeitocolateral, favorito);
+            bulaList.add(bula);
+        }
+        db.close();
+
         return bulaList;
     }
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkSlateBlue">
+
+    <TextView
+        android:id="@+id/cadastrar_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Cadastro Alarme"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    //Scrollview para o modo landscape
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicamentos:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/Black"/>
+            <Spinner
+                android:id="@+id/spinner_medicamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecione o horário:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/Black"/>
+            <Button
+                android:id="@+id/button_alarme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="selecionarHorario"
+                android:background="@drawable/edit_text_style"/>
+         <Button
+             android:id="@+id/cadastro_alarme"
+             android:onClick="cadastrarAlarme"
+             android:layout_width="100dp"
+             android:layout_height="wrap_content"
+             android:layout_gravity="end"
+             android:text="Cadastrar"
+             android:background="@drawable/edit_text_style"/>
+     </LinearLayout>
+
+
+
+</LinearLayout>

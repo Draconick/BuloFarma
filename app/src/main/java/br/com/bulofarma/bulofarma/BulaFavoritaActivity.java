@@ -1,14 +1,12 @@
 package br.com.bulofarma.bulofarma;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+
 import java.util.List;
 
 import br.com.bulofarma.bulofarma.apresentacao.BulaAdapter;
@@ -16,9 +14,9 @@ import br.com.bulofarma.bulofarma.dados.RepositorioBula;
 import br.com.bulofarma.bulofarma.modelo.Bula;
 
 /**
- * Created by Victor Hugo on 11/05/2016.
+ * Created by Katrina on 26/05/2016.
  */
-public class VerBulaActivity extends Activity {
+public class BulaFavoritaActivity extends Activity {
     private ListView lista;
     private List<Bula> bulaList;
     private RepositorioBula repositorioBula;
@@ -41,7 +39,7 @@ public class VerBulaActivity extends Activity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                VerBulaActivity.this.adapter.getFilter().filter(s);
+                BulaFavoritaActivity.this.adapter.getFilter().filter(s);
 
                 adapter.setBulaList(bulaList);
             }
@@ -51,19 +49,18 @@ public class VerBulaActivity extends Activity {
 
             }
         });
-        registerForContextMenu(lista);
 
+        registerForContextMenu(lista);
 
     }
     @Override
     protected void onResume() {
         super.onResume();
         carregarBulas();
-
     }
 
     public void carregarBulas(){
-        bulaList = repositorioBula.listar();
+        bulaList = repositorioBula.listarFavorito();
         adapter = new BulaAdapter(this, bulaList);
         lista.setAdapter(adapter);
     }

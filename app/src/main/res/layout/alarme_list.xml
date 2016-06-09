@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<TextView
+    android:id="@+id/titulo_bula_alarme"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="15pt"
+    android:text="Titulo"
+    android:layout_marginLeft="5dp"
+    android:textColor="@color/Black" />
+
+    <TextView
+        android:id="@+id/horario_bula_alarme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horário"
+        android:textSize="10pt"
+        android:textColor="@color/Black"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="8dp"/>
+
+    <Switch
+        android:id="@+id/switch_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/DarkSlateBlue"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp" />
+</RelativeLayout>
